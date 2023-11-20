@@ -19,7 +19,7 @@ function calcularDivergencia() {
     var numeroNotaFiscal = document.getElementById('numeroNotaFiscal').value;
     var codigoItem = document.getElementById('codigoItem').value;
     var resultadoDiv = document.getElementById('resultado');
-    var quantidadeDoItem = document.getElementById ('quantidadeItem').value;
+    var quantidadeDoItem = document.getElementById('quantidadeItem').value;
 
     var mensagem = `A nota fiscal de número ${numeroNotaFiscal}, da ordem de compra de código ${numeroOrdemCompra}, realizada pelo comprador(a) ${nomeComprador}, contém uma divergência de ${tipoDivergencia}, no produto de código ${codigoItem}, `;
 
@@ -28,14 +28,15 @@ function calcularDivergencia() {
         var quantidadeNotaFiscal = document.getElementById('quantidadeNotaFiscal').value;
         var valorUnitario = document.getElementById('valorUnitario').value;
 
-        mensagem += `na ordem de compra foi comprado ${quantidadeOrdemCompra} e na nota fiscal está chegando ${quantidadeNotaFiscal}, excedendo em ${quantidadeNotaFiscal - quantidadeOrdemCompra} a quantidade comprada. O valor unitário é ${valorUnitario}.`;
+
+        mensagem += `na ordem de compra foi comprado ${quantidadeOrdemCompra} e na nota fiscal está chegando ${quantidadeNotaFiscal}, excedendo em ${quantidadeNotaFiscal - quantidadeOrdemCompra} a quantidade comprada. O valor total é ${valorUnitario * quantidadeNotaFiscal}.`;
     } else {
         var valorItemOrdemCompra = document.getElementById('valorItemOrdemCompra').value;
         var valorItemNotaFiscal = document.getElementById('valorItemNotaFiscal').value;
         var quantidadeDoItem = document.getElementById('quantidadeItem').value;
         var valorItemAcordado = quantidadeDoItem * valorItemOrdemCompra;
         var valorItemErrado = quantidadeDoItem * valorItemNotaFiscal;
-        var resultadoDivergencia = valorItemErrado - valorItemAcordado ;
+        var resultadoDivergencia = valorItemErrado - valorItemAcordado;
 
         mensagem += `na ordem de compra foi comprado a R$ ${valorItemOrdemCompra} e na nota fiscal está chegando a R$ ${valorItemNotaFiscal}, excedendo em R$ ${resultadoDivergencia} o valor que foi comprado.`;
     }
