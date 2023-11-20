@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>Divergência de Notas Fiscais</title>
+  </head>
+  <body>
+    <header>
+      <aside>
+        <img src="./img/logo.jpg" alt="logo"/>
+      </aside>
+      <h2>Divergência de Notas Fiscais</h2>
+      <nav>
+        <a href="./index.html">Controle de Viagens</a>
+        <a href="./form.js">Divergências fiscais</a>
+      </nav>
+    </header>
+    
+    <main>
+      <form class="divergenciaForm" id="divergenciaForm">
+          <label for="tipoDivergencia">Tipo de Divergência:</label>
+          <select id="tipoDivergencia" onchange="atualizarCampos()">
+              <option value="valor">Divergência de Valor</option>
+              <option value="quantidade">Divergência de Quantidade</option>
+          </select>
+
+          <label for="nomeComprador">Nome do Comprador:</label>
+          <input type="text" id="nomeComprador" required><br>
+
+          <label for="numeroOrdemCompra">Número da Ordem de Compra:</label>
+          <input type="text" id="numeroOrdemCompra" required><br>
+
+          <label for="numeroNotaFiscal">Número da Nota Fiscal:</label>
+          <input type="text" id="numeroNotaFiscal" required><br>
+
+          <label for="codigoItem">Código do Item:</label>
+          <input type="text" id="codigoItem" required><br>
+
+          <!--  divergência de quantidade -->
+          <div id="camposQuantidade" style="display:none;">
+              <label for="quantidadeOrdemCompra">Quantidade na Ordem de Compra:</label>
+              <input type="number" id="quantidadeOrdemCompra" required><br>
+
+              <label for="quantidadeNotaFiscal">Quantidade na Nota Fiscal:</label>
+              <input type="number" id="quantidadeNotaFiscal" required><br>
+
+              <label for="valorUnitario">Valor Unitário:</label>
+              <input type="number" step="0.01" id="valorUnitario" required><br>
+          </div>
+
+          <!--  divergência de valor -->
+          <div id="camposValor" style="display:none;">
+              <label for="valorItemOrdemCompra">Valor do Item na Ordem de Compra:</label>
+              <input type="number" step="0.01" id="valorItemOrdemCompra" required><br>
+              <label for="valorItemNotaFiscal">Valor do Item na Nota Fiscal:</label>
+              <input type="number" step="0.01" id="valorItemNotaFiscal" required><br>
+              <label for="quantidadeItem">Quantidade do Item</label>
+              <input type="number" step="0.01" id="quantidadeItem" required><br>
+          </div>
+
+          <button class="button" type="button" onclick="calcularDivergencia()">
+              Calcular Divergência
+          </button>
+          <button class="button" type="reset">Apagar </button>
+      </form>
+
+      <div class="resultado">
+          <div id="resultado"></div>
+          <button class="button" type="button" id="btnCopiarTexto" onclick="copiarTexto()">
+              Copiar Texto
+          </button>
+      </div>
+  </main>
+
+    <script src="./form.js"></script>
+  </body>
+</html>

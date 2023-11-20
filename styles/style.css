@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: monospace;
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  height: 100vh;
+}
+header {
+  box-shadow: 0 0.1rem 0.5rem gray;
+  text-align: center;
+  color: #02448a;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 20%;
+}
+nav {
+  display: flex;
+    justify-content: flex-end;
+    font-size: xx-small;
+    flex-direction: column;
+}
+nav a {
+  text-decoration: none;
+  font-size: 20px;
+  width: 150px;
+  background-color: #02448a;
+  color: white;
+  margin: 1rem;
+  border-radius: 10px;
+}
+div#logo {
+  display: grid;
+}
+h2 {
+  font-size: 50px;
+}
+header img {
+  width: 120px;
+  border-radius: 1rem;
+}
+fieldset {
+  display: grid;
+  grid-template-columns: 1fr;
+  border: solid 1px black;
+  padding: 1rem;
+  border-radius: 1rem;
+  width: 70vh;
+  height: 50vh;
+  font-size: 35px;
+}
+
+main {
+  margin: 5px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 75%;
+}
+.divergenciaForm {
+  display: grid;
+  font-size: 20px;
+  border: solid 1px;
+  border-radius: 1rem;
+  padding: 1rem;
+  align-items: center;
+  margin: 1rem;
+}
+.resultado {
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  padding: 10rem;
+  width: 60%;
+}
+input[type="checkbox"] {
+  transform: scale(2.5);
+  margin-right: 5px;
+}
+#divergencia {
+  display: grid;
+}
+form#deliveryForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+form input {
+  align-items: center;
+}
+#hora {
+  width: 230px;
+  border: 1px solid;
+  padding: 5px;
+}
+#imagemAgendamento {
+  width: 400%;
+  text-align: center;
+  margin: 1rem 13rem;
+  font-size: 25px;
+}
+.button {
+  color: white;
+  margin: 4px;
+  background: #02448a;
+  border: none;
+  border-radius: 10px;
+  width: 100%;
+  height: 50px;
+  cursor: pointer;
+  font-size: 17px;
+  padding: 5px;
+}
+input[type="button"]:hover {
+  background-color: #5689b3;
+}
+div#resultado {
+  margin: 1rem;
+}
+#slider {
+  width: 400px;
+  height: 200px;
+  overflow: hidden;
+}
+
+#imagemSlider {
+  width: 30%;
+  height: 30%;
+}

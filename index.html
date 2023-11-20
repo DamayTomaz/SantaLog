@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>SantaLog</title>
+  </head>
+  <body>
+    <header>
+      <img src="./img/logo.jpg" alt="logo" />
+      <h2>Controle de Viagens</h2>
+      <nav>
+        <a href="./index.html">Controle de Viagens</a>
+        <a href="./form.html">Divergências fiscais</a>
+      </nav>
+    </header>
+    <main>
+      <form id="deliveryForm">
+        <fieldset>
+          <legend>Escolha os destinos:</legend>
+          <label
+            ><input type="checkbox" name="destino" value="Sede" /> Sede</label
+          >
+          <label
+            ><input type="checkbox" name="destino" value="Oncologia" />
+            Oncologia</label
+          >
+          <label
+            ><input type="checkbox" name="destino" value="CancerCenter" />
+            Cancer Center</label
+          >
+          <label
+            ><input type="checkbox" name="destino" value="Farol" /> Farol</label
+          >
+          <label
+            ><input type="checkbox" name="destino" value="Guia" /> Guia</label
+          >
+          <label
+            ><input type="checkbox" name="destino" value="Poço" /> Poço</label
+          >
+        </fieldset>
+        
+        <input
+          class="button"
+          type="button"
+          value="Confirmar"
+          onclick="gerarImagem()"
+        />
+        <button class="button" id="copiarBotao" onclick="copiarTexto()">Copiar</button>
+      </form>
+      <div id="imagemAgendamento"></div>
+      
+    </main>
+  </body>
+  <script src="./index.js"></script>
+</html>
